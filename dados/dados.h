@@ -2,6 +2,10 @@
 #ifndef DADOS_H
 #define DADOS_H
 
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+
 #define EXIT_FAILURE 1
 
 // Definição da struct que representa um registro de log

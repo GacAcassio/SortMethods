@@ -10,7 +10,7 @@ LogRecord* generateLogRecord()
   LogRecord *logRecordUnit = malloc(sizeof( LogRecord));
   if (logRecordUnit == NULL) 
   {
-    perror("Erro ao alocar mem´oria");
+    perror("Erro ao alocar memória");
     exit(EXIT_FAILURE);
   }
   
