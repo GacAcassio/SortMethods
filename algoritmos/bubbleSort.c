@@ -1,5 +1,6 @@
 #include "algoritmos.h"
 
+//Baseado no algoritmo apresentado em sala
 void bubbleSort()
 {
   printf("tamanhVetor %d\n", tamanhoVetor);

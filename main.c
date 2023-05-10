@@ -41,7 +41,7 @@ int main(void)
   }
 
   
-  bubbleSort();
+  shellSort();
   
   printf("Hello Worldsssss %d\n", contChamadas);
   desalocaEspaco();
