@@ -1,9 +1,8 @@
 #include "../dados/dados.h"
-#include "stdio.h"
+#include <stdio.h>
 
-int contChamadas = 20;
 
-void bubble(LogRecord c)
+void bubble()
 {
-  printf("aaaaaaaaaaaaaaaaa %d\n", contChamadas);
+  printf("ok\n");
 }
