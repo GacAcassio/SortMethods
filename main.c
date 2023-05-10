@@ -10,6 +10,6 @@ int main(void)
   LogRecord *b = generateLogRecord();
   s = b;
   bubble(s);
-  printf("Hello World  %d\n", contChamadas);
+  printf("Hello World %d\n", contChamadas);
   return 0;
 }
