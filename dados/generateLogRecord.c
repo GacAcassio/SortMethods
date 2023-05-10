@@ -11,7 +11,7 @@ LogRecord* generateLogRecord()
   if (logRecordUnit == NULL) 
   {
     perror("Erro ao alocar memória");
-    desalocEspaco();
+    desalocaEspaco();
     exit(EXIT_FAILURE);
   }
   

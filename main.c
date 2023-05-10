@@ -41,7 +41,7 @@ int main(void)
   }
 
   
-  shellSort();
+  mergeSort(0, tamanhoVetor - 1);
   
   printf("Hello Worldsssss %d\n", contChamadas);
   desalocaEspaco();

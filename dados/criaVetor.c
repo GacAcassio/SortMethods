@@ -10,7 +10,7 @@ LogRecord** criaVetor()
     if (x == NULL)
     {
         printf("Erro na alocação de espaço \n");
-        desalocEspaco();
+        desalocaEspaco();
         exit(1);
     }
     //Preenche o vetor

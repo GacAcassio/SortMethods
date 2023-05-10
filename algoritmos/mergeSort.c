@@ -7,12 +7,13 @@ void merge(int l, int m, int r)
     int n1 = m - l + 1;
     int n2 = r - m;
  
-    inLogRecord* L[n1], R[n2];
+    LogRecord** L = malloc(sizeof(LogRecord*) * n1);
+    LogRecord** R = malloc(sizeof(LogRecord*) * n2);
  
     if (L == NULL || R == NULL)
     {
         printf("Erro ao alocar memória");
-        desalocEspaco();
+        desalocaEspaco();
         exit(1);
     }
     for (i = 0; i < n1; i++)
@@ -20,15 +21,18 @@ void merge(int l, int m, int r)
     for (j = 0; j < n2; j++)
         R[j] = vetor[m + 1 + j];
  
-    i = 0; 
+    i = 0;     
     j = 0; 
     k = l; 
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
+    while (i < n1 && j < n2) 
+    {
+        if (compMaior(L[i], R[j]))
+        {
             vetor[k] = L[i];
             i++;
         }
-        else {
+        else 
+        {
             vetor[k] = R[j];
             j++;
         }
@@ -36,13 +40,15 @@ void merge(int l, int m, int r)
     }
  
   
-    while (i < n1) {
+    while (i < n1) 
+    {
         vetor[k] = L[i];
         i++;
         k++;
     }
  
-    while (j < n2) {
+    while (j < n2) 
+    {
         vetor[k] = R[j];
         j++;
         k++;
