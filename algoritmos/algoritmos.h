@@ -5,7 +5,10 @@
    
    int tamanhoVetor;
    int contChamadas;
-   LogRecord** vetor;  
+   LogRecord** vetor;
    
    void bubbleSort();
+   void sort(int i, int f);
+   void merge(int i, int m, int f);
+   void mergeSort();
 #endif
