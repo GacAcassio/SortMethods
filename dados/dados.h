@@ -20,4 +20,11 @@ typedef struct {
   int process_id; // id do processo
 } LogRecord;
 
+  bool compMaior(LogRecord* A, LogRecord* B);
+  LogRecord** criaVetor();
+  void desalocaEspaco();
+  LogRecord* generateLogRecord();
+  void troca(LogRecord** A, LogRecord** B);
+  void inverter();
+
 #endif

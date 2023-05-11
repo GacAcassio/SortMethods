@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/workspaces/SortMethods",
+            "binaryPath": "/workspaces/SortMethods/meu_programa",
+            "binaryArgs": []
+        }
+    ]
+}
