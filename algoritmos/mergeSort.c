@@ -6,25 +6,26 @@ void merge(int l, int m, int r)
     int i, j, k;
     int n1 = m - l + 1;
     int n2 = r - m;
- 
     LogRecord** L = malloc(sizeof(LogRecord*) * n1);
     LogRecord** R = malloc(sizeof(LogRecord*) * n2);
- 
-    if (L == NULL || R == NULL)
+    
+    if (*L == NULL || *R == NULL)
     {
-        printf("Erro ao alocar memória");
+        printf("Erro ao alocar memória\n");
         desalocaEspaco();
         exit(1);
     }
 
     for (i = 0; i < n1; i++)
     {
-        L[i] = vetor[l + i];
+        L[i] = NULL;
+        troca(&L[i], &vetor[l + i]);
     }
 
     for (j = 0; j < n2; j++)
     {
-        R[j] = vetor[m + 1 + j];
+        R[j] = NULL;
+        troca(&R[j], &vetor[m + 1 + j]);
     }
  
     i = 0;     
@@ -35,12 +36,12 @@ void merge(int l, int m, int r)
     {
         if (compMaior(L[i], R[j]))
         {
-            vetor[k] = L[i];
+            troca(&vetor[k], &L[i]);
             i++;
         }
         else 
         {
-            vetor[k] = R[j];
+            troca(&vetor[k], &R[j]);
             j++;
         }
         k++;
@@ -49,17 +50,19 @@ void merge(int l, int m, int r)
   
     while (i < n1) 
     {
-        vetor[k] = L[i];
+        troca(&vetor[k], &L[i]);
         i++;
         k++;
     }
  
     while (j < n2) 
     {
-        vetor[k] = R[j];
+        troca(&vetor[k], &R[j]);
         j++;
         k++;
     }
+    free(L);
+    free(R);
 }
  
 void mergeSort(int l, int r)
@@ -70,7 +73,6 @@ void mergeSort(int l, int r)
  
         mergeSort(l, m);
         mergeSort(m + 1, r);
- 
         merge(l, m, r);
     }
 }
