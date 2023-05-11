@@ -16,15 +16,21 @@ void merge(int l, int m, int r)
         desalocaEspaco();
         exit(1);
     }
+
     for (i = 0; i < n1; i++)
+    {
         L[i] = vetor[l + i];
+    }
+
     for (j = 0; j < n2; j++)
+    {
         R[j] = vetor[m + 1 + j];
+    }
  
     i = 0;     
     j = 0; 
     k = l; 
-    
+
     while (i < n1 && j < n2) 
     {
         if (compMaior(L[i], R[j]))
