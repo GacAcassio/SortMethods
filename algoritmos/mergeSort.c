@@ -13,7 +13,10 @@ void mergeSort()
 }
 
 void sort(int i, int f) {
-  if (i >= f) return;
+  if (i >= f)
+  {
+    return;
+  }
 
   int m = (i + f) / 2;
 
@@ -28,17 +31,32 @@ void merge(int i, int m, int f) {
   int z,
       iv = i, ic = m + 1;
 
-  for (z = i; z <= f; z++) aux[z] = vetor[z];
+  for (z = i; z <= f; z++)
+  {
+    aux[z] = vetor[z];
+  }
 
   z = i;
 
   while (iv <= m && ic <= f) {
 
-    if (compMaior(aux[iv], aux[ic])) vetor[z++] = aux[iv++];
-    else vetor[z++] = aux[ic++];
+    if (compMaior(aux[iv], aux[ic]))
+    { 
+      vetor[z++] = aux[iv++];
+    }
+    else
+    {
+      vetor[z++] = aux[ic++];
+    }
   }
 
-  while (iv <= m) vetor[z++] = aux[iv++];
+  while (iv <= m)
+  {
+    vetor[z++] = aux[iv++];
+  }
 
-  while (ic <= f) vetor[z++] = aux[ic++];
+  while (ic <= f)
+  {
+    vetor[z++] = aux[ic++];
+  }
 }
