@@ -25,6 +25,8 @@ void constroiHeap(int i, int n)
 
 void heapSort()
 {
+    contTroca = 0;
+    contComp = 0;
     int n = tamanhoVetor;
     for (int i = n / 2 - 1; i >= 0; i--)
     {

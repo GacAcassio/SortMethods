@@ -1,7 +1,9 @@
 #include "dados.h"
 
 //verificar se  B é maior que A
-bool compMaior(LogRecord* A, LogRecord* B){
+bool compMaior(LogRecord* A, LogRecord* B)
+{
+  contComp++;
   //Retorna 1 para B é maior ou 0 para B é menor, caso seja igual, comparamos o próximo campo->
   if (B->process_id > A->process_id)
   {

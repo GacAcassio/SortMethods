@@ -1,5 +1,7 @@
 #include "algoritmos.h"
 
+//O cocktail é uma adaptação do bubble sort
+//o cocktail é nada mais que o bubble sort aplicado biderecionalmente
 void cocktailSort() {
     int left = 0;
     int right = tamanhoVetor - 1;

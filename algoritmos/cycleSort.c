@@ -5,6 +5,8 @@
 //Vetor ordenado inversamente complexidade O(n²)
 void cycleSort() 
 {
+    contTroca = 0;
+    contComp = 0;
     int n = tamanhoVetor;
     for (int cycleStart = 0; cycleStart < n - 1; cycleStart++) {
         LogRecord* item = vetor[cycleStart];
@@ -28,6 +30,7 @@ void cycleSort()
             LogRecord* temp = item;
             item = vetor[pos];
             vetor[pos] = temp;
+            contTroca++;
         }
         
         while (pos != cycleStart) {
@@ -47,6 +50,7 @@ void cycleSort()
                 LogRecord* temp = item;
                 item = vetor[pos];
                 vetor[pos] = temp;
+                contTroca++;
             }
         }
     }

@@ -3,8 +3,9 @@
 // Baseado nos algoritmos apresentados em sala
 void quickSort()
 {
+    contTroca = 0;
+    contComp = 0;
     quick(0, tamanhoVetor - 1);
-    printf("aq\n");
 }
 
 void quick(int l, int r)
@@ -14,6 +15,7 @@ void quick(int l, int r)
 
     if (l < ij[1])
     {
+        quick(l, ij[1] - 1);
         quick(l, ij[1] - 1);
     }
 

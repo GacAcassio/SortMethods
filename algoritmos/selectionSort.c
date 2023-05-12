@@ -4,6 +4,8 @@
 void selectionSort()
 {
     int min = 0;
+    contTroca = 0;
+    contComp = 0;
     for (int i = 0; i < tamanhoVetor - 1; i++)
     {
         min = i;

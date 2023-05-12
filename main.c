@@ -2,15 +2,11 @@
 //(usado para funções relacionadas a estrutura LogRecord)
 //e o headder algoritmos.h
 //(usado para as funções de ordenação)
+//ele também inclui todos arquivos feitos, assim precisamos compilar só o main
 #include "sorts.h"
 #include "time.h"
 
-//Instanciando variáveis externas/globais declaradas em sorts.h
-LogRecord** vetor;
-int tamanhoVetor;
-int contChamadas;
-
-//A compilação está sendo feita via Makefile no compilador gcc
+//A compilação está sendo feita somente no main via compilador gcc
 //Testei o clang, mas o limite de meória dele é baixo
 //O valgrind está monitorando a administração de memória
 
@@ -18,7 +14,7 @@ int main(void)
 {
   int op = 0;
 
-  printf("Digite cccco tamanho do veto0000r: ");
+  printf("Digite o tamanho do vetor: ");
   scanf("%d", &tamanhoVetor);
 
   if (tamanhoVetor <= 0)
@@ -48,15 +44,20 @@ int main(void)
     inverter();
   }
 
-  printf("Selecione o algoritmo:\n0-Bubble Sort\n1-Inserction Sort\n2-Selection Sort\n3-Merge Sort\n4-Shell Sort\n5-Quick Sort\n6-Heap Sort\n7-Cycle Sort\nOpcao: ");
+  printf("Selecione o algoritmo:\n0-Bubble Sort\n1-Inserction Sort\n2-Selection Sort\n3-Merge Sort\n4-Shell Sort\n5-Quick Sort\n6-Heap Sort\n7-Cycle Sort\n8-CockTailSort\n9-CombSort\nOpcao: ");
   scanf("%d", &op);
 
+  clock_t inicio, fim;
+  double tempoExecucao;
+
+  inicio = clock();
   switch(op)
   {
     case 0:
       bubbleSort();
       break;
     case 1:
+       printf("hmmmm %llu\n", contComp);
       inserctionSort();
       break;
     case 2:
@@ -81,13 +82,17 @@ int main(void)
       cocktailSort();
       break;
     case 9:
+      combSort();
+      break;
     default:
       printf("Opção inválida!\n");
       return 0;
   }
-  selectionSort();
   
-  printf("Hello Worldss %d\n", contChamadas);
+  fim = clock();
+  tempoExecucao = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
+  printf("Tempo: %.5lf\nComparacoes: %llu\nTrocas: %llu\n", tempoExecucao, contComp, contTroca);
   desalocaEspaco();
   
   return 0;

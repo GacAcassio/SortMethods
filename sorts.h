@@ -18,9 +18,11 @@
     #include "algoritmos/inserctionSort.c"
     #include "algoritmos/cycleSort.c"
     #include "algoritmos/cocktailSort.c"
+    #include "algoritmos/combSort.c"
 
+    extern unsigned long long int contComp;
     extern int tamanhoVetor;
-    extern int contChamadas;
+    extern unsigned long long int contTroca;
     extern LogRecord** vetor;  
       
 #endif

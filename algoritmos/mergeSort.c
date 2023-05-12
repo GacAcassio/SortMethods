@@ -14,11 +14,13 @@ void merge(int l, int m, int r)
 
     for (i = 0; i < n1; i++)
     {
+      contTroca++;
       L[i] = vetor[l + i];
     }
 
     for (j = 0; j < n2; j++)
     {
+      contTroca++;
       R[j] = vetor[m + 1 + j];
     }
  
@@ -30,11 +32,13 @@ void merge(int l, int m, int r)
     {
       if (compMaior(L[i], R[j]))
       {
+        contTroca++;
         vetor[k] = L[i];
         i++;
       }
       else 
       {
+        contTroca++;
         vetor[k] = R[j];
         j++;
       }
@@ -44,6 +48,7 @@ void merge(int l, int m, int r)
   
     while (i < n1) 
     {
+      contTroca++;
       vetor[k] = L[i];
       i++;
       k++;
@@ -51,6 +56,7 @@ void merge(int l, int m, int r)
  
     while (j < n2) 
     {
+      contTroca++;
       vetor[k] = R[j];
       j++;
       k++;
@@ -72,6 +78,8 @@ void sort(int l, int r)
 
 void mergeSort()
 {
+  contTroca = 0;
+  contComp = 0;
   L = malloc(sizeof(LogRecord*) * tamanhoVetor);
   R = malloc(sizeof(LogRecord*) * tamanhoVetor);
   if (L == NULL || R == NULL)

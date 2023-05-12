@@ -2,10 +2,6 @@
 #define ALGORITMOS_H
 
    #include "../dados/dados.h"
-
-   int tamanhoVetor;
-   int contChamadas;
-   LogRecord** vetor;
    
    void bubbleSort();
    void sort(int i, int f);
@@ -19,5 +15,7 @@
    void quickSort();
    void constroiHeap(int i, int n);
    void heapSort();
+   void cocktailSort();
    void cycleSort();
+   void combSort();
 #endif
