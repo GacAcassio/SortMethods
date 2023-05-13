@@ -12,7 +12,7 @@
 
 
 //compilar com gcc no terminall: gcc -o main main.c
-//executar no terminal: ./main.c
+//executar no terminal: ./main
 
 int main(void) 
 {
