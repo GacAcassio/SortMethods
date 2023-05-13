@@ -10,6 +10,10 @@
 //Testei o clang, mas o limite de meória dele é baixo
 //O valgrind está monitorando a administração de memória
 
+
+//compilar com gcc no terminall: gcc -o main main.c
+//executar no terminal: ./main.c
+
 int main(void) 
 {
   int op = 0;
