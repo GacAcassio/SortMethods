@@ -96,7 +96,7 @@ int main(void)
   fim = clock();
   tempoExecucao = (double)(fim - inicio) / CLOCKS_PER_SEC;
 
-  printf("Tempo: %.5lf\nComparacoes: %llu\nTrocas: %llu\n", tempoExecucao, contComp, contTroca);
+  printf("Tempo: %.5lf segundos\nComparacoes: %llu\nTrocas: %llu\n", tempoExecucao, contComp, contTroca);
   desalocaEspaco();
   
   return 0;

@@ -1,5 +1,6 @@
 #ifndef SORTS_H
 #define SORTS_h
+
     //Incluindo todos os arquivos no header para que eu possa compilar apenas o main
     #include "algoritmos/algoritmos.h"
     #include "dados/troca.c"
@@ -20,6 +21,7 @@
     #include "algoritmos/cocktailSort.c"
     #include "algoritmos/combSort.c"
 
+    //Escopo global
     extern unsigned long long int contComp;
     extern int tamanhoVetor;
     extern unsigned long long int contTroca;
