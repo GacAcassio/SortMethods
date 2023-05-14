@@ -1,7 +1,5 @@
 #include "algoritmos.h"
 
-#include "algoritmos.h"
-
 //O combSort é uma junção do shellSort com o bubble
 //Complexidade O(n²), mas com desempenho melhor que o bubble
 void combSort()
