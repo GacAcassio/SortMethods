@@ -9,8 +9,6 @@
 //A compilação está sendo feita somente no main via compilador gcc
 //Testei o clang, mas o limite de meória dele é baixo
 //O valgrind está monitorando a administração de memória
-
-
 //compilar com gcc no terminall: gcc -o main main.c
 //executar no terminal: ./main
 
@@ -61,7 +59,6 @@ int main(void)
       bubbleSort();
       break;
     case 1:
-       printf("hmmmm %llu\n", contComp);
       inserctionSort();
       break;
     case 2:
